@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Cómo solicito vacaciones?",
+    "answer": "Debes enviar un correo a rrhh@empresa.com con las fechas propuestas."
+  },
+  {
+    "question": "Cuál es el horario laboral?",
+    "answer": "El horario de trabajo es de 9:00 a 18:00, con una hora para comer."
+  },
+  {
+    "question": "Dónde encuentro la oficina?",
+    "answer": "La oficina principal se encuentra en Calle Mayor 123, Barcelona."
+  },
+  {
+    "question": "Cómo accedo a mi correo corporativo?",
+    "answer": "Puedes acceder a tu correo a través de webmail.empresa.com con las credenciales que se te han enviado."
+  },
+  {
+    "question": "Quién es mi manager?",
+    "answer": "Tu manager es Juan Pérez, puedes contactarlo en la extensión 456."
+  }
+]
