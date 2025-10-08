@@ -95,6 +95,8 @@ The API is self-documenting. To view the interactive Swagger UI, open the follow
 To execute all automated tests (both unit and integration tests), use the following Maven command:
 ```bash
 ./mvnw test
-
+```
 ## Author
- * [@acocinas] (https://github.com/acocinas) 
+ * Alfonso Cocinas 
+ * GitHub: [@acocinas](https://github.com/acocinas) 
+ * Linkedin:[Alfonso Cocinas](https://www.linkedin.com/in/alfonso-cocinas/)
