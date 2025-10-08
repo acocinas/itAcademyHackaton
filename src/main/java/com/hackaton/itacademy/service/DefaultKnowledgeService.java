@@ -21,6 +21,7 @@ public class DefaultKnowledgeService implements KnowledgeService {
     @Override
     public Optional<String> findAnswerByQuestion(String userQuestion) {
         String normalizedUserQuestion = normalizeString(userQuestion);
+        String[] userKeywords = normalizedUserQuestion.split("\\s+");
 
         Optional<List<KnowledgeEntry>> optionalEntries = knowledgeRepository.findAll();
 
@@ -28,7 +29,15 @@ public class DefaultKnowledgeService implements KnowledgeService {
             List<KnowledgeEntry> entries = optionalEntries.get();
             for (KnowledgeEntry entry : entries) {
                 String normalizedEntryQuestion = normalizeString(entry.getQuestion());
-                if (normalizedEntryQuestion.contains(normalizedUserQuestion)) {
+
+                long matchingKeywords = 0;
+                for (String keyword : userKeywords) {
+                    if (normalizedEntryQuestion.contains(keyword)) {
+                        matchingKeywords++;
+                    }
+                }
+
+                if (matchingKeywords > userKeywords.length / 2) {
                     return Optional.of(entry.getAnswer());
                 }
             }
