@@ -61,7 +61,7 @@ The project is structured to follow best practices for a clean, modular, and mai
 
 Once the application is running, you can interact with the bot directly in the console. The bot uses a keyword-based search logic to find answers.
 
-![Console Interaction Screenshot](URL_OF_YOUR_CONSOLE_SCREENSHOT)
+![Console Interaction Screenshot](docs/images/consola.png)
 
 ### REST API
 
@@ -71,7 +71,9 @@ The API can be tested using tools like **Swagger UI**, **Postman**, or `curl`.
 The API is self-documenting. To view the interactive Swagger UI, open the following URL in your web browser after starting the application:
 `http://localhost:8080/swagger-ui.html`
 
-![Swagger UI Screenshot](URL_OF_YOUR_SWAGGER_SCREENSHOT)
+![Swagger UI Screenshot](docs/images/swagger1.png)
+![Swagger UI Screenshot2](docs/images/SwaggerGet.png)
+![Swagger UI Screenshot3](docs/images/SwaggerPost.png)
 
 #### Testing with `curl`
 * **GET all knowledge entries:**
@@ -85,7 +87,8 @@ The API is self-documenting. To view the interactive Swagger UI, open the follow
     -d '{ "question": "What is the team meeting schedule?", "answer": "The next team meeting is on Friday at 10:00 AM." }'
     ```
 
-![Postman POST Request Screenshot](URL_OF_YOUR_POSTMAN_SCREENSHOT)
+![Postman POST Request Screenshot](docs/images/PostmanGet.png)
+![Postman POST Request Screenshot2](docs/images/PostmanPost.png)
 
 ## Application Testing
 
