@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hackaton.itacademy.domain.KnowledgeEntry;
 import com.hackaton.itacademy.domain.KnowledgeRepository;
+import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -25,9 +26,9 @@ public class JsonKnowledgeRepository implements KnowledgeRepository {
 
     public JsonKnowledgeRepository(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
-        loadKnowledgeFromFile();
     }
 
+    @PostConstruct
     private void loadKnowledgeFromFile() {
         try {
             this.knowledgeEntries = objectMapper.readValue(knowledgeFile.getInputStream(), new TypeReference<>() {});
